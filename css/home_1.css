@@ -1,0 +1,41 @@
+html{
+    font-size: 100px;
+}
+.pr{
+    position: relative;
+}
+.pa{
+    position: absolute;
+}
+body{
+	font-size: 0.28rem;
+    line-height: .21rem;
+    margin: 0;
+}
+#mainSection{
+	width: 25.6rem;
+    margin: 0 auto;
+}
+#mainSection .section1{
+    width: 100%;
+    height: 11.72rem;
+    background: url(../images/section1_bg.png) center 0/cover no-repeat;
+}
+#mainSection .section1 .img1{
+    width: 5.98rem;
+    height: .78rem;
+    left: 4rem;
+    top: 2.87rem;
+}
+#mainSection .section1 .img2{
+    width: 10.03rem;
+    height: 5.38rem;
+    left: 3.99rem;
+    top: 4.46rem;
+}
+#mainSection .section1 .img3{
+    width: 8.54rem;
+    height: 11.43rem;
+    left: 13.4rem;
+    top: 1.16rem;
+}

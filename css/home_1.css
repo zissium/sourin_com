@@ -21,18 +21,22 @@ ul{
     display: flex;
     flex-direction: column;
 }
+#mainSection p{
+    line-height: 1.2em;
+}
 #mainSection .section1{
     width: 100%;
     height: 11.72rem;
     background: url(../images/section1_bg.png) center 0/cover no-repeat;
 }
-#mainSection .section2 .text_gradient{
+#mainSection .text_gradient{
     background-image: linear-gradient(10deg, #36d5de,#e53ad2);
     background-size: 150% 150%;
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    color: transparent!important;
     line-height: 1em;
+    text-transform: uppercase;
 }
 #mainSection .section1 h2{
 	width: 10.03rem;
@@ -45,6 +49,11 @@ ul{
 	font-stretch: normal;
 	line-height: 2.5rem;
 	letter-spacing: -0.2rem;
+    background-image: linear-gradient(-32deg, #2d3033,#f0f0f0);
+    background-size: 150% 150%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent!important;
 	color: #fefefe;
 	margin: 0;
 }
@@ -75,7 +84,7 @@ ul{
 	font-size: 1.11rem;
 	font-weight: normal;
 	color: #9f9f9f;
-    margin-top: 1.9rem;
+    margin-top: 1.5rem;
     margin-bottom: 0.4rem;
     text-align: center;
 }
@@ -145,6 +154,7 @@ ul{
 	font-weight: normal;
 	font-stretch: normal;
 	line-height: 1em;
+    letter-spacing: -2px;
 	color: #9f9f9f;
 }
 #mainSection .section3 > p{
@@ -250,7 +260,6 @@ ul{
 #mainSection .section4 h2{
 	font-family: AcuminConcept-Semibold;
 	font-size: 0.96rem;
-    line-height: 1em;
 	font-weight: normal;
 	margin: 0 0 .5rem;
 	color: #9f9f9f;

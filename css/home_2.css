@@ -39,3 +39,18 @@
     text-align: right;
     margin-top:.88rem;
 }
+
+.section7 {
+    height:13.31rem;
+}
+
+.section7 .content {
+    width: 6.88rem;
+	height: 1.89rem;
+	font-family: AcuminConcept-Semibold;
+	font-size: .96rem;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: .17rem;
+	color: #9f9f9f;
+}

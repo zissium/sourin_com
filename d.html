@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Loading Effect</title>
+    <style>
+        #counter {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="counter">1</div>
+
+    <script>
+        const counterElement = document.getElementById('counter');
+        const targetNumber = 60;
+        const duration = 1000; // 持续时间（毫秒）
+
+        let startTime;
+        function updateCounter(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const progress = timestamp - startTime;
+            const value = Math.ceil((progress / duration) * targetNumber);
+
+            if (value <= targetNumber) {
+                counterElement.textContent = value;
+                requestAnimationFrame(updateCounter);
+            }
+        }
+
+        requestAnimationFrame(updateCounter);
+    </script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Loading Effect on Scroll</title>
+    <style>
+        #counter {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 500px; /* 初始时让数字在页面下方 */
+        }
+    </style>
+</head>
+<body>
+    <div id="counter">1</div>
+
+    <script>
+        function startCounter(target, duration) {
+            const counterElement = document.getElementById('counter');
+            const startOffset = counterElement.offsetTop; // 元素初始位置
+
+            let startTime;
+            function updateCounter(timestamp) {
+                if (!startTime) startTime = timestamp;
+                const progress = timestamp - startTime;
+                const percentage = Math.min(progress / duration, 1);
+                const value = Math.ceil(percentage * target);
+
+                if (value <= target) {
+                    counterElement.textContent = value;
+                    requestAnimationFrame(updateCounter);
+                }
+            }
+
+            requestAnimationFrame(updateCounter);
+
+            window.onscroll = function() {
+                const scrollPosition = window.scrollY;
+                if (scrollPosition > startOffset - window.innerHeight && scrollPosition < startOffset + window.innerHeight) {
+                    startTime = null; // 重新开始计时
+                    requestAnimationFrame(updateCounter);
+                }
+            };
+        }
+
+        // 在滚动到某个位置时触发数字加载效果
+        startCounter(60, 5000);
+    </script>
+</body>
+</html>

@@ -75,9 +75,9 @@
             <h2>ALWAYS ON RELIABILITY</h2>
             <p>The AAA Zero Leakage Technology ensures reliable performance by preventing any unintended leaks or spills. This enhances the overall dependability of the FERO pod cartridge.</p>
             <div class="info">
-                <img src="./images/product_04_part1.png" alt="product_04_part1.png" class="pa part1 wow leftPartSlider" data-wow-offset="900">
+                <img src="./images/product_04_part1.png" alt="product_04_part1.png" class="pa part1 wow leftPartSlider" data-wow-offset="700">
                 <img src="./images/product_04_part2.png" alt="product_04_part2.png" class="pa part2">
-                <img src="./images/product_04_part3.png" alt="product_04_part3.png" class="pa part3 wow rightPartSlider" data-wow-offset="900">
+                <img src="./images/product_04_part3.png" alt="product_04_part3.png" class="pa part3 wow rightPartSlider" data-wow-offset="700">
                 <img src="./images/line1.png" alt="line1.png" class="pa line1 wow fadeIn" data-wow-offset="586" data-wow-delay="0.5s">
                 <img src="./images/line2.png" alt="line2.png" class="pa line2 wow fadeIn" data-wow-offset="625" data-wow-delay="0.5s">
                 <img src="./images/line3.png" alt="line3.png" class="pa line3 wow fadeIn" data-wow-offset="365" data-wow-delay="0.5s">
@@ -89,11 +89,13 @@
        
         <section class="section5">
             <img src="./images/productimage_6.png" class="product_image" alt="product_image" />
-            <div class="title">
-                ALWAYS ON</br>
-                PRECISION
+            <div class="content">
+                <div class="title">
+                    ALWAYS ON</br>
+                    PRECISION
+                </div>
+                <div class="description">Indulge in a seamless transition from MTL to RDL with our</br>adjustable precisionairflow control across all FERO series</br>pod cartridges. Plus, its unibody metal slider increased</br> damping,ensuring worry-free usage – no unintended</br>adjustments in your pocket, even when you're on the</br>move.</div>
             </div>
-            <div class="description">Indulge in a seamless transition from MTL to RDL with our adjustable precision</br>airflow control across all FERO series pod cartridges. Plus, its unibody metal slider increased damping,</br>ensuring worry-free usage – no unintended adjustments in your pocket, even when you're on the move.</div>
         </section>
 
    
@@ -364,6 +366,58 @@
                 }
             };
         }
+
+
+         //designWidth:设计稿的实际宽度值，需要根据实际设置
+    //maxWidth:制作稿的最大宽度值，需要根据实际设置
+    //这段js的最后面有两个参数记得要设置，一个为设计稿实际宽度，一个为制作稿最大宽度，例如设计稿为750，最大宽度为750，则为(750,750)
+    (function(designWidth, maxWidth) {
+        var doc = document,
+            win = window,
+            docEl = doc.documentElement,
+            remStyle = document.createElement("style"),
+            tid;
+
+        function refreshRem() {
+            var width = docEl.getBoundingClientRect().width;
+            maxWidth = maxWidth || 540;
+            width>maxWidth && (width=maxWidth);
+            var rem = width * 100 / designWidth;
+            remStyle.innerHTML = 'html{font-size:' + rem + 'px;}';
+        }
+
+        if (docEl.firstElementChild) {
+            docEl.firstElementChild.appendChild(remStyle);
+        } else {
+            var wrap = doc.createElement("div");
+            wrap.appendChild(remStyle);
+            doc.write(wrap.innerHTML);
+            wrap = null;
+        }
+        //要等 wiewport 设置好后才能执行 refreshRem，不然 refreshRem 会执行2次；
+        refreshRem();
+
+        win.addEventListener("resize", function() {
+            clearTimeout(tid); //防止执行两次
+            tid = setTimeout(refreshRem, 300);
+        }, false);
+
+        win.addEventListener("pageshow", function(e) {
+            if (e.persisted) { // 浏览器后退的时候重新计算
+                clearTimeout(tid);
+                tid = setTimeout(refreshRem, 300);
+            }
+        }, false);
+
+        if (doc.readyState === "complete") {
+            doc.body.style.fontSize = "16px";
+        } else {
+            doc.addEventListener("DOMContentLoaded", function(e) {
+                doc.body.style.fontSize = "16px";
+            }, false);
+        }
+    })(2560, 2560);
+
     </script>
 </body>
 </html>

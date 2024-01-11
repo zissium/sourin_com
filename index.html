@@ -11,29 +11,80 @@
 <body>
     <div id="mainSection">
         <section class="section1 pr">
+            <h2 class="pa">ALWAYS <br/>ON</h2>
             <img src="./images/suorin_fero.png" alt="suorin_fero.png" class="pa img1">
-            <img src="./images/Always_on.png" alt="Always_on.png" class="pa img2">
-            <img src="./images/prodouct_01.png" alt="prodouct_01.png" class="pa img3">
+            <!-- <img src="./images/Always_on.png" alt="Always_on.png" class="pa img2"> -->
+            <img src="./images/prodouct_01.png" alt="prodouct_01.png" class="pa img3 float-up-down">
         </section>
 
         <section class="section2 pr">
-            <h2><img src="./images/suorin_fero.png" alt="suorin_fero.png" class="pa img1"></h2>
-            <p>This is the content of section 2.</p>
+            <h2>
+                ALWAYS ON , ALWAYS YOU
+                <!-- <img src="./images/section2_title.png" alt="section2_title.png"> -->
+            </h2>
+            <p>Equipped with an intelligent 0.52“ OLED display screen, it allows you to effortlessly monitor the device status. Meanwhile, five dazzling LED light modes cater to diverse preferences, injecting a touch of fashion and creativity into your usage experience.</p>
+            <div class="product pa">
+                <div class="pr">
+                    <img src="./images/product_02.png" alt="product_02.png" class="wow slideInUp">
+                    <img src="./images/rectangle_01.png" alt="rectangle_01.png" class="pa rectangle_01 wow fadeInUp" data-wow-offset="345" data-wow-delay=".5s">
+                    <img src="./images/rectangle_02.png" alt="rectangle_02.png" class="pa rectangle_02 wow fadeInUp" data-wow-offset="460" data-wow-delay=".8s">
+                    <img src="./images/rectangle_03.png" alt="rectangle_03.png" class="pa rectangle_03 wow fadeInUp" data-wow-offset="585"data-wow-delay="1.1s">
+                    <img src="./images/rectangle_04.png" alt="rectangle_04.png" class="pa rectangle_04 wow fadeInUp" data-wow-offset="740" data-wow-delay="1.4s">
+                    <img src="./images/rectangle_05.png" alt="rectangle_05.png" class="pa rectangle_05 wow fadeInUp" data-wow-offset="935" data-wow-delay="1.7s">
+                </div>
+            </div>
         </section>
 
-        <section class="section3">
-            <h2>Section 3</h2>
-            <p>This is the content of section 3.</p>
+        <section class="section3 pr" id="section3">
+            <h2>EXPERIENCE ALWAYS-ON VAPING WITH OUR BPC COIL SYSTEM</h2>
+            <p>Discover a vaping experience that seamlessly combines flavor, health, and consistency – the future of always-on satisfaction!</p>
+            <div class="boxInfo">
+                <strong>BPC</strong> <span class="small">(BOOST, PURE, CLEAN)</span><br/>
+                heating tech
+            </div>
+            <ul id="jumpDataBlock">
+                <li>
+                    <div class="inner">
+                        <p class="larger">+<span id="counter1">1</span>%</p>
+                        <p>Flavor reducibility+60%</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="inner">
+                        <p class="larger">-<span id="counter2">1</span>%</p>
+                        <p>-87% Reduction in harmful substances</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="inner">
+                        <p class="larger">+<span id="counter3">1</span>%</p>
+                        <p>Consistency of taste +23%</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="inner">
+                        <p class="larger">+<span id="counter4">1</span>%</p>
+                        <p>-Nicotine atomization efficiency+12%</p>
+                    </div>
+                </li>
+            </ul>
+            <img src="./images/product_03.png" alt="product_03.png" class="pa wow slideInRight" data-wow-offset="1000">
         </section>
 
-        <section class="section4">
-            <h2>Section 3</h2>
-            <p>This is the content of section 3.</p>
-        </section>
-
-        <section class="section4">
-            <h2>Section 3</h2>
-            <p>This is the content of section 3.</p>
+        <section class="section4 pr">
+            <h2>ALWAYS ON RELIABILITY</h2>
+            <p>The AAA Zero Leakage Technology ensures reliable performance by preventing any unintended leaks or spills. This enhances the overall dependability of the FERO pod cartridge.</p>
+            <div class="info">
+                <img src="./images/product_04_part1.png" alt="product_04_part1.png" class="pa part1 wow leftPartSlider" data-wow-offset="900">
+                <img src="./images/product_04_part2.png" alt="product_04_part2.png" class="pa part2">
+                <img src="./images/product_04_part3.png" alt="product_04_part3.png" class="pa part3 wow rightPartSlider" data-wow-offset="900">
+                <img src="./images/line1.png" alt="line1.png" class="pa line1 wow fadeIn" data-wow-offset="586" data-wow-delay="0.5s">
+                <img src="./images/line2.png" alt="line2.png" class="pa line2 wow fadeIn" data-wow-offset="625" data-wow-delay="0.5s">
+                <img src="./images/line3.png" alt="line3.png" class="pa line3 wow fadeIn" data-wow-offset="365" data-wow-delay="0.5s">
+                <p class="pa para1 wow fadeIn" data-wow-offset="190" data-wow-delay="1s"><strong>A</strong>ir-tight Silicone Cap</p>
+                <p class="pa para2 wow fadeIn" data-wow-offset="190" data-wow-delay="1s"><strong>A</strong>assured High-Polymer Cotton</p>
+                <p class="pa para3 wow fadeIn" data-wow-offset="190" data-wow-delay="1s"><strong>A</strong>ir-tight Silicone Seal</p>
+            </div>
         </section>
        
         <section class="section5">
@@ -239,6 +290,80 @@
             </div>
         </section>
     </div>
-    <script src="wow.js"></script>
+    <script src="./js/wow.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", () => {
+            new WOW().init();
+
+            var triggerElementTop = document.getElementById('section3').offsetTop + document.getElementById('jumpDataBlock').offsetTop;
+
+            var animatedElement = document.getElementById('counter1');
+            var animatedElement2 = document.getElementById('counter2');
+            var animatedElement3 = document.getElementById('counter3');
+            var animatedElement4 = document.getElementById('counter4');
+            var pause = false;
+            // 监听滚动事件
+            window.addEventListener('scroll', function () {
+                // 获取触发元素的位置信息
+                const scrollPosition = window.scrollY;
+                // 如果触发元素可见
+                if (scrollPosition > triggerElementTop - 500 && scrollPosition < triggerElementTop - 300 && !pause) {
+                    // 开始数字跳动动画
+                    jumpToNumber(animatedElement, 60, 18); // 设置要跳到的数字
+                    jumpToNumber(animatedElement2, 87, 15); // 设置要跳到的数字
+                    jumpToNumber(animatedElement3, 23, 50); // 设置要跳到的数字
+                    jumpToNumber(animatedElement4, 12); // 设置要跳到的数字
+                    pause = true;
+                }
+            });
+        });
+
+
+        // 数字跳动动画函数
+        function jumpToNumber(element, targetNumber, jumpInterval = 100) {
+            var currentNumber = 0;
+
+            // 使用定时器实现数字跳动效果
+            var jumpTimer = setInterval(function () {
+                // 更新当前数字
+                currentNumber++;
+
+                // 更新元素内容
+                element.textContent = currentNumber;
+
+                // 如果达到目标数字，清除定时器
+                if (currentNumber === targetNumber) {
+                clearInterval(jumpTimer);
+                }
+            }, jumpInterval);
+        }
+
+        function startCounter(id, target, duration) {
+            const counterElement = document.getElementById(id);
+            const startOffset = document.getElementById("section3").offsetTop; // 元素初始位置
+            let startTime;
+            function updateCounter(timestamp) {
+                if (!startTime) startTime = timestamp;
+                console.log(333,timestamp);
+                const progress = timestamp - startTime;
+                const percentage = Math.min(progress / duration, 1);
+                const value = Math.ceil(percentage * target);
+
+                if (value <= target) {
+                    counterElement.textContent = value;
+                    // requestAnimationFrame(updateCounter);
+                }else{
+                    clearAnimationFrame(AnimationFrame);
+                }
+            }
+
+            window.onscroll = function() {
+                const scrollPosition = window.scrollY;
+                if (scrollPosition > startOffset + 400) {
+                    const AnimationFrame = requestAnimationFrame(updateCounter);
+                }
+            };
+        }
+    </script>
 </body>
 </html>

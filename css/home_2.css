@@ -42,15 +42,70 @@
 
 .section7 {
     height:13.31rem;
+    position: relative;
+    text-align: center;
 }
 
 .section7 .content {
     width: 6.88rem;
-	height: 1.89rem;
 	font-family: AcuminConcept-Semibold;
-	font-size: .96rem;
+
 	font-weight: normal;
 	font-stretch: normal;
-	line-height: .17rem;
 	color: #9f9f9f;
+    margin: 0 auto;
 }
+
+.section7 .content .title {
+	font-size: .96rem;
+    margin-top: 1.18rem;
+    line-height: .9rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.section7 .content .description {
+    width: 6.94rem;
+	height: 1.64rem;
+	font-family: AcuminConcept-WideLight;
+	font-size: .28rem;
+	font-weight: normal;
+	font-stretch: normal;
+    line-height: .3rem;
+    margin-top: .6rem;
+    margin-bottom: 2.26rem;
+    
+}
+
+.product_left ,.product_right {
+   width: 4.03rem;
+   height:4.19rem;
+}
+
+.section7 .content .description b {
+    font-weight: bold;
+    color: #686868;
+
+}
+
+.section7 .product_left {
+    position: absolute;
+    left: 0;
+    left: 4rem;
+    top: 4rem;
+    z-index: -1;
+
+}
+
+.section7 .product_right {
+    position: absolute;
+    right: 3.4rem;
+    top: 5rem;
+}
+.times {
+   width: 14.10rem;
+   margin: 0 auto;
+   z-index: 11;
+}
+
+

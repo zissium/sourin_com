@@ -36,7 +36,7 @@
         </section>
 
         <section class="section3 pr" id="section3">
-            <h2>EXPERIENCE ALWAYS-ON VAPING WITH OUR BPC COIL SYSTEM</h2>
+            <h2 class="text_gradient">EXPERIENCE ALWAYS-ON VAPING WITH OUR BPC COIL SYSTEM</h2>
             <p>Discover a vaping experience that seamlessly combines flavor, health, and consistency – the future of always-on satisfaction!</p>
             <div class="boxInfo">
                 <strong>BPC</strong> <span class="small">(BOOST, PURE, CLEAN)</span><br/>
@@ -318,55 +318,55 @@
             });
         });
 
- //designWidth:设计稿的实际宽度值，需要根据实际设置
-    //maxWidth:制作稿的最大宽度值，需要根据实际设置
-    //这段js的最后面有两个参数记得要设置，一个为设计稿实际宽度，一个为制作稿最大宽度，例如设计稿为750，最大宽度为750，则为(750,750)
-    (function(designWidth, maxWidth) {
-        var doc = document,
-            win = window,
-            docEl = doc.documentElement,
-            remStyle = document.createElement("style"),
-            tid;
+        //designWidth:设计稿的实际宽度值，需要根据实际设置
+        //maxWidth:制作稿的最大宽度值，需要根据实际设置
+        //这段js的最后面有两个参数记得要设置，一个为设计稿实际宽度，一个为制作稿最大宽度，例如设计稿为750，最大宽度为750，则为(750,750)
+        (function(designWidth, maxWidth) {
+            var doc = document,
+                win = window,
+                docEl = doc.documentElement,
+                remStyle = document.createElement("style"),
+                tid;
 
-        function refreshRem() {
-            var width = docEl.getBoundingClientRect().width;
-            maxWidth = maxWidth || 540;
-            width>maxWidth && (width=maxWidth);
-            var rem = width * 100 / designWidth;
-            remStyle.innerHTML = 'html{font-size:' + rem + 'px;}';
-        }
-
-        if (docEl.firstElementChild) {
-            docEl.firstElementChild.appendChild(remStyle);
-        } else {
-            var wrap = doc.createElement("div");
-            wrap.appendChild(remStyle);
-            doc.write(wrap.innerHTML);
-            wrap = null;
-        }
-        //要等 wiewport 设置好后才能执行 refreshRem，不然 refreshRem 会执行2次；
-        refreshRem();
-
-        win.addEventListener("resize", function() {
-            clearTimeout(tid); //防止执行两次
-            tid = setTimeout(refreshRem, 300);
-        }, false);
-
-        win.addEventListener("pageshow", function(e) {
-            if (e.persisted) { // 浏览器后退的时候重新计算
-                clearTimeout(tid);
-                tid = setTimeout(refreshRem, 300);
+            function refreshRem() {
+                var width = docEl.getBoundingClientRect().width;
+                maxWidth = maxWidth || 540;
+                width>maxWidth && (width=maxWidth);
+                var rem = width * 100 / designWidth;
+                remStyle.innerHTML = 'html{font-size:' + rem + 'px;}';
             }
-        }, false);
 
-        if (doc.readyState === "complete") {
-            doc.body.style.fontSize = "16px";
-        } else {
-            doc.addEventListener("DOMContentLoaded", function(e) {
-                doc.body.style.fontSize = "16px";
+            if (docEl.firstElementChild) {
+                docEl.firstElementChild.appendChild(remStyle);
+            } else {
+                var wrap = doc.createElement("div");
+                wrap.appendChild(remStyle);
+                doc.write(wrap.innerHTML);
+                wrap = null;
+            }
+            //要等 wiewport 设置好后才能执行 refreshRem，不然 refreshRem 会执行2次；
+            refreshRem();
+
+            win.addEventListener("resize", function() {
+                clearTimeout(tid); //防止执行两次
+                tid = setTimeout(refreshRem, 300);
             }, false);
-        }
-    })(2560, 2560);
+
+            win.addEventListener("pageshow", function(e) {
+                if (e.persisted) { // 浏览器后退的时候重新计算
+                    clearTimeout(tid);
+                    tid = setTimeout(refreshRem, 300);
+                }
+            }, false);
+
+            if (doc.readyState === "complete") {
+                doc.body.style.fontSize = "16px";
+            } else {
+                doc.addEventListener("DOMContentLoaded", function(e) {
+                    doc.body.style.fontSize = "16px";
+                }, false);
+            }
+        })(2560, 2560);
 
         // 数字跳动动画函数
         function jumpToNumber(element, targetNumber, jumpInterval = 100) {
@@ -385,33 +385,6 @@
                 clearInterval(jumpTimer);
                 }
             }, jumpInterval);
-        }
-
-        function startCounter(id, target, duration) {
-            const counterElement = document.getElementById(id);
-            const startOffset = document.getElementById("section3").offsetTop; // 元素初始位置
-            let startTime;
-            function updateCounter(timestamp) {
-                if (!startTime) startTime = timestamp;
-                console.log(333,timestamp);
-                const progress = timestamp - startTime;
-                const percentage = Math.min(progress / duration, 1);
-                const value = Math.ceil(percentage * target);
-
-                if (value <= target) {
-                    counterElement.textContent = value;
-                    // requestAnimationFrame(updateCounter);
-                }else{
-                    clearAnimationFrame(AnimationFrame);
-                }
-            }
-
-            window.onscroll = function() {
-                const scrollPosition = window.scrollY;
-                if (scrollPosition > startOffset + 400) {
-                    const AnimationFrame = requestAnimationFrame(updateCounter);
-                }
-            };
         }
     </script>
 </body>

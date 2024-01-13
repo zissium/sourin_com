@@ -2,7 +2,7 @@
     position: relative;
 }
 
-.section5 img {
+.section5 ._product_image {
     width:10.7rem;
     height: 11.07rem;
 }
@@ -13,6 +13,43 @@
     top:1.99rem;
     width: 7.98rem;
 }
+
+.section5 .arrow {
+    position: absolute;
+    left: 5.8rem;
+    /* height: 1rem; */
+    top: 5rem;
+    width: 0.55rem;
+    overflow: hidden;
+}
+
+.section5 .product_image {
+    margin-left: 2rem;
+}
+
+.section5  img {
+    margin-left: 0!important;
+}
+
+
+.section5 .arrow img {
+    width: 100%;
+    animation: moveUp 3.5s infinite; /* 使用动画，并设置无限循环 */
+}
+
+@keyframes moveUp {
+    0% {
+      transform: translate(-60%,100%) ;
+
+    }
+    100% {
+      transform: translate(0%,-100%);
+
+    }
+  }
+
+
+
 
 
 .section5 .content .title {
@@ -25,6 +62,10 @@
     text-align: right;
     width: 100%;
     font-weight: bold;
+
+    width: 5.36rem;
+	height: 1.89rem;
+    float:right;
 }
 
 .video_section {
@@ -42,6 +83,7 @@
     color: #515151;
     text-align: right;
     margin-top:.88rem;
+    clear: both;
 }
 
 .section7 {
@@ -113,29 +155,31 @@
 }
 
 .section8 {
-    height:17.40rem;
+    height:13.11rem;
     position: relative;
     overflow: hidden;
 }
 
 .section8 .leftsc {
-    width: 10.95rem;
+    width: 11.02rem;
     left:0;
     position: absolute;
-    bottom:0;
+    top:0;
+    height: 9.81rem;
 }
 
 .section8  .product_m {
-    width: 15.4rem;
+	width: 8.73rem;
+	height: 11.05rem;
     position: absolute;
     z-index: 1111;
     right: -100%;
-        bottom: -100%;
+        top: 100%;
 }
 
 .section8  .rightse {
     width: 16.91rem;
-	height: 10.61rem;
+	height: 7.46rem;
     right:0;
     position: absolute;
     bottom: 0;
@@ -156,6 +200,8 @@
 	line-height: 1rem;
 	letter-spacing: -.02rem;
     text-align: right;
+    width: 8.03rem;
+    height: 1.89rem;
 }
 
 
@@ -168,8 +214,8 @@
 	letter-spacing: 0px;
 	color: #515151;
     text-align: right;
-    margin-top: 1.1rem;
-    margin-bottom: 1.3rem;
+    margin-top: .4rem;
+    margin-bottom: .7rem;
 }
 
 .section8 .product_descrition .des2 {
@@ -203,6 +249,8 @@
 	letter-spacing: -.02rem;
 	color: #9f9f9f;
     font-weight: bold;
+    width: 11.69rem;
+	height: .69rem;
 }
 
 .section9 .content .descrition {
@@ -279,7 +327,8 @@
 }
 
 .section11 .title {
-    width: 11.22rem;
+    width: 6.83rem;
+
 	height: .69rem;
 	font-family: AcuminConcept-Semibold;
 	font-size: .8rem;
@@ -320,12 +369,12 @@
 
 .section11 {
     height: 9.24rem;
-    padding-bottom: 1rem;
 }
 
 .section11  .product_info table td {
-    height: .98rem;
+    height: .78rem;
     padding-left: .5rem;
+    font-size: .3rem;
 }
 
 .product_parm1 td:first-child,
@@ -366,6 +415,8 @@
     margin-bottom: 1.04rem;
     font-weight: bold;
     text-align: center;
+        width: 16.05rem;
+        height: .7rem;
 
 }
 
@@ -418,6 +469,8 @@
     margin-bottom: 1.04rem;
     font-weight: bold;
     text-align: center;
+    width: 10.72rem;
+	height: .69rem;
 
 }
 
@@ -452,24 +505,24 @@
 @-webkit-keyframes productPartSlider {
 	0% {
         left: 100%;
-        bottom: -100%;
+        top: 100%;
 	}
 
 	100% {
         left:  4.88rem;	
-        bottom: 0;
+        top: 1.42rem;
     }
 }
 
 @keyframes productPartSlider {
 	0% {
         left: 100%;
-        bottom: -100%;
+        top: 100%;
 	}
 
 	100% {
         left: 4.88rem;	
-        bottom: 0;
+        top: 1.42rem;  
 	}
 }
 

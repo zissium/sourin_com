@@ -73,6 +73,12 @@ ul{
     top: 1.16rem;
     z-index: 1;
 }
+
+#mainSection .section1 .pa img {
+	width: 10.03rem;
+	height: 5.38rem;
+}
+
 #mainSection .section2{
     overflow: hidden;
     width: 100%;
@@ -81,12 +87,15 @@ ul{
 }
 #mainSection .section2 h2{
     font-family: AdobeHeitiStd-Regular;
-	font-size: .8rem;
 	font-weight: bold;
 	color: #9f9f9f;
+    margin: 0 auto;
     margin-top: 1.5rem;
     margin-bottom: 0.4rem;
     text-align: center;
+    width: 12.68rem;
+    height: 0.95rem;
+    font-size: .8rem;
 }
 /* #mainSection .section2 h2 img{
     width: 12.68rem;
@@ -261,10 +270,13 @@ ul{
 	font-family: AcuminConcept-Semibold;
 	font-size: 0.8rem;
 	font-weight: bold;
-	margin: 0 0 .5rem;
+    margin: 0 auto;
+	margin-bottom: .5rem;
 	color: #9f9f9f;
     padding-top:1.57rem;
     text-align: center;
+    width: 11.02rem;
+    height: .69rem;
 }
 #mainSection .section4 > p{
     width: 15.87rem;
@@ -341,7 +353,11 @@ ul{
     letter-spacing: -0.02rem;
     color: #9f9f9f;
     text-align: center;
+    width: 9.31rem;
+    margin: 0 auto;
     margin-top: 1.45rem;
+
+	height: 1.89rem;
 }
 #mainSection .section6 .description{
     font-size: 0.28rem;

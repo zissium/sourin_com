@@ -11,7 +11,8 @@
 <body>
     <div id="mainSection">
         <section class="section1 pr">
-            <h2 class="pa">ALWAYS <br/>ON</h2>
+            <h2 class="pa"><img src="./images/01text.png"></h2>
+            <h2 style="display:none;" class="pa">ALWAYS <br/>ON</h2>
             <img src="./images/suorin_fero.png" alt="suorin_fero.png" class="pa img1">
             <!-- <img src="./images/Always_on.png" alt="Always_on.png" class="pa img2"> -->
             <img src="./images/prodouct_01.png" alt="prodouct_01.png" class="pa img3 float-up-down">
@@ -97,7 +98,12 @@
         </section>
        
         <section class="section5">
-            <img src="./images/productimage_6.png" class="product_image slideInLeft wow" alt="product_image" />
+            <div class="product_image slideInLeft wow">
+                <img class="_product_image" src="./images/productimage_6.png" alt="product_image" />
+                <div class="arrow">
+                    <img src="./images/arrow.png" alt="product_image" />
+                </div>
+            </div>
             <div class="content">
                 <div class="title text_gradient">
                     ALWAYS ON</br>
@@ -313,21 +319,27 @@
                         <img src="./images/product_s6.png"/>
                         <p>Lemon Squash</p>
                     </li>
-                </div>
+                </ul>
             </div>
         </section>
 
+        
+
         <section class="section13">
-            <h2 class="title text_gradient">Kit Package Includes</h2>
-            <div class="product_image slideInUp wow"><img src="./images/ioncs_19.png"/></div>
-            <div class="product_title">
-                <span class="title1 slideInUp wow">1 * SUORIN FERO Device</span>
-                <span class="title2 slideInUp wow">1* Lanyard</span>
-                <span class="title3 slideInUp wow">1* Pod Cartridge 0.6Ω</br>1* Pod Cartridge 0.8Ω</span>
-                <span class="title4 slideInUp wow">1*User Manual</span>
+            <div class="content">
+                <h2 class="title text_gradient">Kit Package Includes</h2>
+                <div class="product_image slideInUp wow"><img src="./images/ioncs_19.png"/></div>
+                <div class="product_title">
+                    <span class="title1 slideInUp wow">1 * SUORIN FERO Device</span>
+                    <span class="title2 slideInUp wow">1* Lanyard</span>
+                    <span class="title3 slideInUp wow">1* Pod Cartridge 0.6Ω</br>1* Pod Cartridge 0.8Ω</span>
+                    <span class="title4 slideInUp wow">1*User Manual</span>
+                </div>
             </div>
         </section>
     </div>
+
+
     <script src="./js/wow.js"></script>
     <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", () => {

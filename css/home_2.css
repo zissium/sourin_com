@@ -17,7 +17,7 @@
 
 .section5 .content .title {
     font-family: AcuminConcept-Semibold;
-    font-size: .96rem;
+    font-size: .8rem;
     font-weight: normal;
     font-stretch: normal;
     line-height: 1.2rem;
@@ -25,6 +25,10 @@
     text-align: right;
     width: 100%;
     font-weight: bold;
+}
+
+.video_section {
+    width: 100%;
 }
 
 .section5 .content  .description {
@@ -111,6 +115,7 @@
 .section8 {
     height:17.40rem;
     position: relative;
+    overflow: hidden;
 }
 
 .section8 .leftsc {
@@ -124,8 +129,8 @@
     width: 15.4rem;
     position: absolute;
     z-index: 1111;
-    bottom:0;
-    left:4.88rem;
+    right: -100%;
+        bottom: -100%;
 }
 
 .section8  .rightse {
@@ -430,5 +435,36 @@ width: 16.7%;
      text-align: center; 
     font-size: .22rem;
     padding-right: 0.1rem;
+}
+
+
+@-webkit-keyframes productPartSlider {
+	0% {
+        left: 100%;
+        bottom: -100%;
+	}
+
+	100% {
+        left:  4.88rem;	
+        bottom: 0;
+    }
+}
+
+@keyframes productPartSlider {
+	0% {
+        left: 100%;
+        bottom: -100%;
+	}
+
+	100% {
+        left: 4.88rem;	
+        bottom: 0;
+	}
+}
+
+.productPartSlider {
+	-webkit-animation-name: productPartSlider;
+	animation-name: productPartSlider;
+    visibility: visible!important;
 }
 

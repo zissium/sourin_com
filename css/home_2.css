@@ -384,11 +384,22 @@
 }
 
 
-.section12 .content  .product_title  span {
-display: block;
-width: 16.7%;
+.section12 .content  .product_info{
+    display: flex;
+    width: 12.35rem;
+    margin: 0 auto;
+    justify-content: space-between;
 }
-
+.section12 .content  .product_info li{
+    font-family: ArialMT;
+	font-size: 0.21rem;
+	color: #040000;
+    width: 16.67%;
+    text-align: center;
+}
+.section12 .content  .product_info img{
+    height: 6.33rem;
+}
 
 .section13 {
     height: 13.97rem;

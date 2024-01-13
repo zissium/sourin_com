@@ -81,8 +81,8 @@ ul{
 }
 #mainSection .section2 h2{
     font-family: AdobeHeitiStd-Regular;
-	font-size: 1.11rem;
-	font-weight: normal;
+	font-size: .8rem;
+	font-weight: bold;
 	color: #9f9f9f;
     margin-top: 1.5rem;
     margin-bottom: 0.4rem;
@@ -150,8 +150,8 @@ ul{
 	height: 3.09rem;
     margin: 1.89rem 0 0 3.97rem;
 	font-family: AcuminConcept-Semibold;
-	font-size: 0.96rem;
-	font-weight: normal;
+	font-size: .8rem;
+	font-weight: bold;
 	font-stretch: normal;
 	line-height: 1em;
     letter-spacing: -2px;
@@ -259,8 +259,8 @@ ul{
 }
 #mainSection .section4 h2{
 	font-family: AcuminConcept-Semibold;
-	font-size: 0.96rem;
-	font-weight: normal;
+	font-size: 0.8rem;
+	font-weight: bold;
 	margin: 0 0 .5rem;
 	color: #9f9f9f;
     padding-top:1.57rem;
@@ -336,8 +336,8 @@ ul{
 }
 #mainSection .section6 .title{
     font-family: AcuminConcept-Semibold;
-    font-size: 0.96rem;
-    font-weight: normal;
+    font-size: .8rem;
+    font-weight: bold;
     letter-spacing: -0.02rem;
     color: #9f9f9f;
     text-align: center;
@@ -462,6 +462,9 @@ ul{
 	animation-name: leftPartSlider;
     visibility: visible!important;
 }
+
+
+
 
 
 @-webkit-keyframes rightPartSlider {

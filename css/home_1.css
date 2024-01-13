@@ -30,10 +30,10 @@ ul{
     background: url(../images/section1_bg.png) center 0/cover no-repeat;
 }
 #mainSection .text_gradient{
-    background-image: linear-gradient(10deg, #36d5de,#e53ad2);
-    background-size: 150% 150%;
+    background-image: linear-gradient(80deg, #36d5de,#e53ad2);
     -webkit-background-clip: text;
     background-clip: text;
+    letter-spacing: 0;
     color: transparent!important;
     line-height: 1em;
     text-transform: uppercase;
@@ -178,7 +178,7 @@ ul{
     line-height: 1.1em;
 }
 #mainSection .section3 .boxInfo .small{
-	font-size: 0.36rem;
+	font-size: 0.32rem;
 	color: #9f9f9f;
 }
 #mainSection .section3 .boxInfo strong{
@@ -377,6 +377,7 @@ ul{
 }
 #mainSection .section6 .product_parm{
     padding-top: .5rem;
+    font-weight: bold;
 }
 #mainSection .section6 .product_item{
     cursor: pointer;
@@ -392,7 +393,6 @@ ul{
     webkit-transition: .5s all;
     moz-transition: .5s all;
     o-transition: .5s all;
-    font-weight: bold;
 }
 #mainSection .section6 .product_item::after{
     content: "";
